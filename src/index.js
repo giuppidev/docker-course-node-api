@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
-import { getTodos } from "./db.js";
+//import { getTodos } from "./db.js";
 
 dotenv.config();
 
@@ -13,6 +13,6 @@ app.get("/", (req, res) => {
   res.status(200).json({ message: "It works now?" });
 });
 
-app.get("/todos", getTodos);
+//app.get("/todos", getTodos);
 
 app.listen(port, () => console.log(`Running on port ${port}`));
