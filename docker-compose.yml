@@ -7,21 +7,21 @@ services:
     ports:
       - "3000:3000"
     command: nodemon /app/src/index.js
-    depends_on:
-      - db
-  db:
-    image: postgres
-    restart: always
-    container_name: todo-db
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_PASSWORD: example
-      PGDATA: /data/postgres
-    volumes:
-      - postgres:/data/postgres
+  #   depends_on:
+  #     - db
+  # db:
+  #   image: postgres
+  #   restart: always
+  #   container_name: todo-db
+  #   ports:
+  #     - 5432:5432
+  #   environment:
+  #     POSTGRES_PASSWORD: example
+  #     PGDATA: /data/postgres
+  #   volumes:
+  #     - postgres:/data/postgres
 volumes:
-  postgres:
+  # postgres:
   web_data:
     driver: local # Define the driver and options under the volume name
     driver_opts:
